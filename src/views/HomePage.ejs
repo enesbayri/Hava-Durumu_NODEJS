@@ -1,0 +1,166 @@
+<center>
+    <p><b>
+            Hava durumu uygulamamıza hoş geldiniz!
+        </b></p>
+</center>
+<div class="card " id="AnaCard">
+    <div class="card-image">
+
+    </div>
+    <div class="card-content">
+        <div class="media">
+            <div class="media-content columns is-vcentered ">
+                <form action="/" method="post">
+                    <div class="field has-addons">
+                        <div class="control">
+                            <input class="input" name="city" type="text"
+                                style="border-bottom-left-radius: 32px; border-top-left-radius: 32px;width:54vw;"
+                                placeholder="Şehir Giriniz!">
+                        </div>
+                        <div class="control">
+                            <input class="button is-info" type="submit"
+                                style="border-bottom-right-radius: 32px; border-top-right-radius: 32px;" value="ARA">
+                        </div>
+                    </div>
+                </form>
+
+
+            </div>
+        </div>
+
+    </div>
+</div>
+<div class="block"></div>
+<% if (typeof error!= "undefined") { %>
+    <div class="card-content" id="mediaContent">
+        <div class="media">
+            <div class="media-content columns is-multiline">
+                <div class="box column is-full">
+                    <div class="card">
+                        <div class="card-image">
+                            <div class="columns">
+                                <div class="column">
+    
+                                        <h1 class="title is-vcentered has-text-link" style="margin-top: 24px;margin-left: 24px;"><b>
+                                                <%=error %>
+                                            </b></h1>
+                                </div>
+                            </div>
+                           
+    
+                        </div>
+    
+    
+                    </div>
+    
+                </div>
+    
+    
+    
+    
+            </div>
+        </div>
+    
+    
+    </div>
+
+<% } else { %>
+    <div class="card-content" id="mediaContent">
+        <div class="media">
+            <div class="media-content columns is-multiline">
+                <div class="box column is-full">
+                    <div class="card">
+                        <div class="card-image">
+                            <div class="columns">
+                                <div class="column">
+    
+                                        <h1 class="title is-vcentered has-text-link" style="margin-top: 24px;margin-left: 24px;"><b>
+                                                <%=weather["city"]%>
+                                            </b></h1>
+                                </div>
+                            </div>
+                            <div class="columns">
+                                <div class="column">
+                                    <figure class="image">
+                                        <img src="/img/weatherIcons/<%=weather["icon"]%>" style="width:150px;margin:24px">
+                                    </figure>
+                                </div>
+                                <div class="column">
+                                    <div class="column">
+                                        <h1><b>Sıcaklık:</b></h1>
+                                    </div>
+                                    <div class="column">
+                                        <h1><b>Hissedilen:</b></h1>
+                                    </div>
+                                    <div class="column">
+                                        <h1><b>Nem:</b></h1>
+                                    </div>
+                                    <div class="column">
+                                        <h1><b>Rüzgar:</b></h1>
+                                    </div>
+                                    <div class="column">
+                                        <h1><b>Bulutluluk:</b></h1>
+                                    </div>
+                                </div>
+                                <div class="column">
+                                    <div class="column has-text-link"><b>
+                                            <%=weather["temp"]%> °
+                                        </b></div>
+                                    <div class="column has-text-link"><b>
+                                            <%=weather["feels_like"]%> °
+                                        </b></div>
+                                    <div class="column has-text-link"><b>
+                                            <%=weather["humidity"]%> %
+                                        </b></div>
+                                    <div class="column has-text-link"><b>
+                                            <%=weather["wind"]%> km/s
+                                        </b></div>
+                                    <div class="column has-text-link"><b>
+                                            <%=weather["clouds"]%> %
+                                        </b></div>
+                                </div>
+                                <div class="column">
+                                    <div class="column has-text-link"><b>
+                                        <i class="fa-solid fa-temperature-low"></i>
+                                        </b></div>
+                                    <div class="column has-text-link"><b>
+                                        <i class="fa-solid fa-temperature-low"></i>
+                                        </b></div>
+                                    <div class="column has-text-link"><b>
+                                        <i class="fa-solid fa-fire-flame-simple"></i>
+                                        </b></div>
+                                    <div class="column has-text-link"><b>
+                                        <i class="fa-solid fa-wind"></i>
+                                        </b></div>
+                                    <div class="column has-text-link"><b>
+                                        <i class="fa-solid fa-cloud"></i>
+                                        </b></div>
+                                </div>
+    
+                            </div>
+                            <div class="columns">
+                                <div class="column" style="position: relative;bottom: 80px;left: 40px;width: 150px;">
+    
+                                        <h1 class="title has-text-link" style="width: 150px;"><b>
+                                                <%=weather["main"]%>
+                                            </b></h1>
+                                </div>
+                            </div>
+    
+    
+                        </div>
+    
+    
+                    </div>
+    
+                </div>
+    
+    
+    
+    
+            </div>
+        </div>
+    
+    
+    </div>
+<% } %>

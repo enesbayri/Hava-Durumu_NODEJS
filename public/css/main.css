@@ -1,0 +1,53 @@
+
+body{
+    background-image: url("/img/bg4.jpg");
+    background-repeat: repeat-y;
+    
+
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    min-height: 1000px;
+}
+
+#imgcolumn{
+    max-width: max-content;
+    
+}
+
+#iconimg{
+    max-height: 13vh;
+    border-top-left-radius: 40%;
+    border-bottom-right-radius:40% ;
+    border-bottom-left-radius: 0%;
+    box-shadow: 2px 25px 10px yellow;
+}
+#anaDiv{
+    padding: 0px;
+    
+}
+#AnaCard{
+    border-top-right-radius: 90px;
+    border-top-left-radius: 90px;
+    border-bottom-right-radius: 90px;
+    border-bottom-left-radius: 90px;
+}
+#icerikDiv {         
+    position: relative;
+    width: 60vw;
+}
+@media (max-width:1000px) {
+    #anaDiv{
+        width: 100vw;
+    }
+    #AnaCard{
+        border-bottom-right-radius: 0px;
+    }
+    #icerikDiv {         
+        position: relative;
+        left: 0px;
+        width: 100vw;
+    
+    }
+ }
