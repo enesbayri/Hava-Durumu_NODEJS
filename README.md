@@ -1,4 +1,4 @@
-# ***HAVA DURUMA***
+# ***HAVA DURUMU***
 
 <hr>
 <br><br>
